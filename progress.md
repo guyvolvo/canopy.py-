@@ -178,4 +178,6 @@ def check_username(query, timeout):
 
     return {"status": "MISSING", "platform": query['platform']}
 ```
-Pretty barebones but I'll add to it as we go
+Pretty barebones but I'll add to it as we go \
+
+Stopped updating because I locked in on the code will have to add more to this in the future !

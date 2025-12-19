@@ -45,3 +45,6 @@ canopy/\
 ├── output/\
 │   └── sample_report.md\
 └── lessons_learned.md\
+
+
+_platforms.json inspired by the Sherlock OSINT project :)_

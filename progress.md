@@ -74,3 +74,39 @@ def main():
     output_group.add_argument('--print-found', help='Print found accounts in real-time', action='store_true')
 
 ```
+
+Decided to go with the Claude workflow 
+
+<img width="218" height="217" alt="image" src="https://github.com/user-attachments/assets/6f708e63-77f8-46ea-901f-18123534a84b" />
+
+I will build the utils.py first which will handle file I/O and loading the platform database based on filters.\
+Here is what I have so far
+
+```python
+import json
+
+
+def laod_platform(file_path, categories=None, exclude=None, specific=None):
+    with open(file_path, 'r') as f:
+        data = json.load(f)
+
+    filtered = {}
+    cat_list = categories.split(',') if categories else []
+    excl_list = exclude.split(',') if exclude else []
+    spec_list = specific.split(',') if specific else []
+
+    for name, info in data.items():
+        if spec_list and name not in spec_list: continue
+        if excl_list and name in excl_list: continue
+        if cat_list and info.get('category') not in cat_list: continue
+        filtered[name] = info
+
+    return filtered
+
+
+def load_usernames(filepath):
+    with open(filepath, 'r') as f:
+        return [line.strip() for line in f if line.strip()]
+```
+
+

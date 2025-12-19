@@ -24,7 +24,7 @@ Note: Canopy was developed and tested exclusively on my own publicly available d
 
 ```bash
 pip install canopy-scanner
-
+-----------------------------------
 git clone https://github.com/guyvolvo/Canopy.git
 cd Canopy
 

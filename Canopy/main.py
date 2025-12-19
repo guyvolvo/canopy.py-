@@ -144,6 +144,10 @@ def main():
     output_group.add_argument('--print-found', help='Print found accounts in real-time', action='store_true')
 
     args = parser.parse_args()
+    if len(sys.argv) == 1:
+        parser.print_help()
+        sys.exit(0)
+    
     platform_db = utils.load_platform(PLATFORM_FILE, args.categories, args.exclude, args.platforms)
     generate_fingerprints(platform_db)
     import data_collector

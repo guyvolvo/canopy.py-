@@ -18,6 +18,21 @@ Note: Canopy was developed and tested exclusively on my own publicly available d
 - CLI interface for easy integration into scripts or automation workflows.
 - Categorized results for better organization (e.g., social, professional, gaming).
 
+## Installation
+Clone the repository:
+
+```bash
+
+pip:
+pip install canopy-scanner
+
+git:
+git clone https://github.com/guyvolvo/Canopy.git
+cd Canopy
+
+```
+
+
 ```bash
 usage: canopy.py [-h] [-u USERNAME] [-U USERNAMES] [-t THREADS] [--timeout TIMEOUT] [--delay DELAY]
                  [--rate-limit RATE_LIMIT] [-c CATEGORIES] [-p PLATFORMS] [--exclude EXCLUDE] [--only-found]
@@ -65,14 +80,6 @@ Output Options:
       canopy -u johndoe -o report.json --format json
       canopy -u johndoe --categories social,gaming
       canopy --list-categories
-```
-
-## Installation
-Clone the repository:
-
-```bash
-git clone https://github.com/guyvolvo/Canopy.git
-cd Canopy
 ```
 
 ### _Legal & Ethical Disclaimer_

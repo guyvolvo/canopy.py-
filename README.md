@@ -1,5 +1,5 @@
-Canopy is a Python-based OSINT framework designed to help individuals discover, organize, and analyze publicly available information about their own digital footprint.
-Canopy was developed and tested exclusively on my own publicly available data as a learning and portfolio project.
+Canopy is a Python-based OSINT (Open-Source Intelligence) framework designed to help individuals discover, organize, and analyze publicly available information about their own digital footprint. \
+Note: Canopy was developed and tested exclusively on my own publicly available data as a learning and portfolio project.
 
 # Project Goals
 
@@ -7,6 +7,24 @@ Canopy was developed and tested exclusively on my own publicly available data as
 - Practice structured OSINT methodology using search engines
 - Correlate results from multiple sources into meaningful categories
 - Demonstrate ethical boundaries and legal awareness in OSINT work
+
+## Features
+
+- Multi-platform username enumeration across social media, coding sites, gaming platforms, and more.
+- Avoids false positives using fingerprint-based validation.
+- Supports local caching of platform fingerprints to speed up scans.
+- Multi-threaded, high-performance scanning with optional rate-limiting and delays.
+- Generates reports in JSON, CSV, HTML, or TXT formats.
+- CLI interface for easy integration into scripts or automation workflows.
+- Categorized results for better organization (e.g., social, professional, gaming).
+
+## Installation
+Clone the repository:
+
+```bash
+git clone https://github.com/guyvolvo/Canopy.git
+cd Canopy
+```
 
 ### _Legal & Ethical Disclaimer_
 
@@ -62,3 +80,21 @@ Canopy/\
 └── requirements.txt           # Dependencies\
 
 _platforms.json inspired by the Sherlock OSINT project :)_
+
+## Methodology
+
+- Canopy uses a structured OSINT approach:
+- Generate a list of platforms to query (social, professional, gaming).
+- Create URL patterns for a target username.
+- Validate account existence using HTTP responses, redirects, error messages, and HTML fingerprints.
+- Aggregate results into structured reports.
+- Optionally store fingerprints locally to avoid redundant requests.
+- This ensures high accuracy while reducing false positives.
+
+## Best Practices
+
+- Only scan accounts you own or have explicit permission to analyze.
+- Use --threads and --rate-limit responsibly to avoid being blocked by platforms.
+- Review your JSON/CSV/HTML reports for patterns before taking any action.
+- Update platforms.json regularly to include new platforms.
+- Periodically refresh fingerprints for platforms that change their 404 pages.

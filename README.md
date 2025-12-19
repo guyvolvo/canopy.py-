@@ -49,7 +49,8 @@ canopy/\
 └── lessons_learned.md\
 
 Claude workflow :
-Canopy/
+
+Canopy/\
 ├── main.py                    # Entry point, CLI interface\
 ├── platforms.json             # Platform database\
 ├── query_generator.py         # Generate queries from usernames\
